@@ -6,11 +6,14 @@ def calc_distance(x1, y1, x2, y2):
 
     return math.sqrt(diff_x**2 + diff_y**2)
 
-suika_x = random.randrange(0, 5)
-suika_y = random.randrange(0, 5)
+# ボードの初期サイズ
+board_size = 5
 
-player_x = random.randrange(0, 5)
-player_y = random.randrange(0, 5)
+suika_x = random.randrange(0, board_size)
+suika_y = random.randrange(0, board_size)
+
+player_x = random.randrange(0, board_size)
+player_y = random.randrange(0, board_size)
 
 # スイカとプレイヤーの座標が同じ場合、プレイヤーのみ座標を再取得する
 while (suika_x == player_x) and (suika_y == player_y):
